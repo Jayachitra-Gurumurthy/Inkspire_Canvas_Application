@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Inkspire_Canvas_Application/static/css/main.5a65d7fb.css",
+    "main.js": "/Inkspire_Canvas_Application/static/js/main.7787bb06.js",
+    "static/js/453.5d39f0ac.chunk.js": "/Inkspire_Canvas_Application/static/js/453.5d39f0ac.chunk.js",
+    "index.html": "/Inkspire_Canvas_Application/index.html",
+    "main.5a65d7fb.css.map": "/Inkspire_Canvas_Application/static/css/main.5a65d7fb.css.map",
+    "main.7787bb06.js.map": "/Inkspire_Canvas_Application/static/js/main.7787bb06.js.map",
+    "453.5d39f0ac.chunk.js.map": "/Inkspire_Canvas_Application/static/js/453.5d39f0ac.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5a65d7fb.css",
+    "static/js/main.7787bb06.js"
+  ]
+}
