@@ -19,6 +19,8 @@ const Canvas = forwardRef(({ tool , brushColor  }, ref) => {
     if (!canvasRef.current) return;
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d", { willReadFrequently: true });
+    canvas.width = 800;
+    canvas.height = 550;
     context.lineCap = "round";
     context.strokeStyle = brushColor; // ✅ dynamic color
     context.lineWidth = 3;
