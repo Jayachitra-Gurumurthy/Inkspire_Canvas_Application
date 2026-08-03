@@ -39,9 +39,18 @@ function App() {
         <button className="tool" onClick={() => canvasRef.current.clearCanvas()} data-tooltip="Clear">
           <FaTrash size={20} />
         </button>
-        <button className="tool" onClick={() => setShowSettings(!showSettings)} data-tooltip="Settings">
-          <FaCog size={20} />
-        </button>
+        <div className="settings-wrapper">
+          <button
+            className="tool"
+            onClick={() => setShowSettings(!showSettings)}
+            data-tooltip="Settings">
+            <FaCog size={20} />
+          </button>
+          <span
+            className="color-indicator"
+            style={{ backgroundColor: brushColor }}
+          ></span>
+        </div>
 
       </aside>
      

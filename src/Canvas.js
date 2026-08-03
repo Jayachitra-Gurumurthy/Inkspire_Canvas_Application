@@ -16,17 +16,22 @@ const Canvas = forwardRef(({ tool , brushColor  }, ref) => {
   const [savedImage, setSavedImage] = useState(null);
   
  useEffect(() => {
-    if (!canvasRef.current) return;
     const canvas = canvasRef.current;
-    const context = canvas.getContext("2d", { willReadFrequently: true });
     canvas.width = 800;
-    canvas.height = 550;
+    canvas.height = 500;
+    const context = canvas.getContext("2d", { willReadFrequently: true });
     context.lineCap = "round";
-    context.strokeStyle = brushColor; // ✅ dynamic color
+    context.strokeStyle = brushColor; // initial color
     context.lineWidth = 3;
     setCtx(context);
-  }, [brushColor]);
+  }, []);
 
+  // ✅ Only update strokeStyle when brushColor changes
+  useEffect(() => {
+    if (ctx) {
+      ctx.strokeStyle = brushColor;
+    }
+  }, [brushColor, ctx]);
 
   const startDrawing = (e) => {
     if (!ctx) return;
